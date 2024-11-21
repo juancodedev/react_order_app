@@ -23,7 +23,7 @@ export function Cart() {
       }
       setProducts(productsArray);
     })();
-  }, [reloadCart]);
+  }, [getProductById, reloadCart]);
 
   const onReloadCart = () => setReloadCart((prev) => !prev);
 

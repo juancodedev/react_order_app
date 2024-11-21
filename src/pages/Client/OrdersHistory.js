@@ -23,7 +23,7 @@ export function OrdersHistory() {
 
       getOrdersByTable(idTableTemp, "", "ordering=-status,-created_at");
     })();
-  }, []);
+  }, [getOrdersByTable, getTableByNumber, tableNumber]);
 
   useEffect(() => {
     (async () => {
@@ -32,7 +32,7 @@ export function OrdersHistory() {
         setIsRequestAccount(response);
       }
     })();
-  }, [idTable]);
+  }, [getPaymentByTable, idTable]);
 
   const onCreatePayment = async (paymentType) => {
     setShowTypePayment(false);

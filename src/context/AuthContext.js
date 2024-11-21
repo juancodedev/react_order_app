@@ -23,7 +23,7 @@ export function AuthProvider(props) {
         setAuth(null);
       }
     })();
-  }, []);
+  }, [getMe]);
 
   const login = async (token) => {
     setToken(token);

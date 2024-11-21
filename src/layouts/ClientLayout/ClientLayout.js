@@ -15,7 +15,7 @@ export function ClientLayout(props) {
       const exist = await isExistTable(tableNumber);
       if (!exist) closeTable();
     })();
-  }, [tableNumber]);
+  }, [closeTable, isExistTable, tableNumber]);
 
   const closeTable = () => {
     history.push("/");

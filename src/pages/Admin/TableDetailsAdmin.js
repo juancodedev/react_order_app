@@ -22,9 +22,9 @@ export function TableDetailsAdmin() {
 
   useEffect(() => {
     getOrdersByTable(id, "", "ordering=-status,created_at");
-  }, [id, reloadOrders]);
+  }, [getOrdersByTable, id, reloadOrders]);
 
-  useEffect(() => getTable(id), [id]);
+  useEffect(() => getTable(id), [getTable, id]);
 
   useEffect(() => {
     (async () => {
